@@ -1,0 +1,13 @@
+az group list (to check the available Resource Groups)
+
+az vm create --name devops-vm \ 
+--location westus \ 
+--size Standard_B1s \ 
+-g <GROUP_NAME> \ 
+--image Ubuntu2204 \ 
+--admin-username <USERNAME> \ 
+--admin-password <PASSWORD> \ 
+--authentication-type password \ 
+--storage-sku Standard_LRS \ 
+--os-disk-size-gb 30 \ 
+--nsg-rule ssh

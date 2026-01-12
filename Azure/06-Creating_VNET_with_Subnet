@@ -1,0 +1,7 @@
+az group list #for getting the Resource_Group name
+
+az network vnet create -n <NETWORK_NAME> \
+-g <RESOURCE GROUP> \
+--address-prefixes <to specify the IP ranges of this vnet>
+--subnet-name <SUBNET_NAME> \
+--subnets <IP_RANGE for subnet>
