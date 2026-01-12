@@ -1,0 +1,11 @@
+az vm create --name devops-vm \ 
+--location westus \ 
+--size Standard_B1s \ 
+-g kml_rg_main-113890dcc27845c9 \ 
+--image Ubuntu2204 \ 
+--admin-username azureuser \ 
+--admin-password Huawei@12345 \ 
+--authentication-type password \ 
+--storage-sku Standard_LRS \ 
+--os-disk-size-gb 30 \ 
+--nsg-rule ssh
