@@ -1,0 +1,26 @@
+az vm list
+az network nic list
+
+#to add a nic the vm should be shut down
+
+az vm stop -n "VM_NAME" \ 
+-g "Resource_Group"
+
+ az vm deallocate -n "VM_NAME" \ 
+-g "Resource_Group"
+
+#Adding the NIC
+az vm nic add -g <Resource_Group> \
+--vm-name <VM_NAME> \
+--nics <NIC_NAME>
+
+#Starting the VM
+az vm start -n "VM_NAME" \ 
+-g "Resource_Group"
+
+#to check the connection of the NIC 
+az vm show -n "VM_NAME" \ 
+ -g "Resource_Group"
+
+#to check the running state of the VM
+az vm list -d -o table

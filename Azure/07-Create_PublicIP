@@ -1,0 +1,4 @@
+az network public-ip create --help
+
+az network public-ip create -n <Public_IP NAME> \
+-g <Resource_Group>

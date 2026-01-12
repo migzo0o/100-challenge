@@ -1,0 +1,7 @@
+az vm list
+az disk list
+
+az vm disk attach -n <DISK_NAME> \
+--vm-name <VM_NAME> \
+-g <Resource_Group>
+

@@ -1,0 +1,15 @@
+az vm list
+az network public-ip list
+
+az network nic ip-config list --nic-name <NIC_NAME> \
+-g <Resource_Group>
+
+az network nic ip-config update -n <IP_CONFIG_NAME> \
+--nic-name <NIC_NAME> \
+-g <Resource_Group>\
+--public-ip-address <Public_IP>
+
+
+#To Verify
+az vm list -d -o table
+
